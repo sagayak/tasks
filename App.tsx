@@ -3,9 +3,10 @@ import React, { useState, PropsWithChildren } from 'react';
 import TodoList from './components/TodoList';
 import Planner from './components/Planner';
 import DueDates from './components/DueDates';
-import Quotes from './components/HabitTracker';
+import QuotesComponent from './components/Quotes';
+import HabitTracker from './components/HabitTracker';
 
-type Section = 'todo' | 'planner' | 'duedates' | 'quotes';
+type Section = 'todo' | 'planner' | 'duedates' | 'quotes' | 'habits';
 
 const CheckSquareIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -31,6 +32,12 @@ const QuoteIcon = () => (
   </svg>
 );
 
+const HabitIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+);
+
 
 const App: React.FC = () => {
     const [activeSection, setActiveSection] = useState<Section>('todo');
@@ -44,7 +51,9 @@ const App: React.FC = () => {
             case 'duedates':
                 return <DueDates />;
             case 'quotes':
-                return <Quotes />;
+                return <QuotesComponent />;
+            case 'habits':
+                return <HabitTracker />;
             default:
                 return <TodoList />;
         }
@@ -78,6 +87,7 @@ const App: React.FC = () => {
                     <NavButton section="planner"><CalendarIcon /> Planner</NavButton>
                     <NavButton section="duedates"><BellIcon /> Due Dates</NavButton>
                     <NavButton section="quotes"><QuoteIcon /> Quotes</NavButton>
+                    <NavButton section="habits"><HabitIcon /> Habits</NavButton>
                 </nav>
 
                 <main>
