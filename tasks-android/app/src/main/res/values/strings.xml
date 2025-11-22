@@ -34,7 +34,7 @@
         \"relation\": [\"delegate_permission/common.handle_all_urls\"],
         \"target\": {
             \"namespace\": \"web\",
-            \"site\": \"https://tasks-six-gamma.vercel.app\"
+            \"site\": \"https://tasks-git-main-sunsams-projects-bbcfd945.vercel.app\"
         }
     }]
     
