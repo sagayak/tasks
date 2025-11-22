@@ -1,4 +1,7 @@
 {
+  "id": "https://tasks-six-gamma.vercel.app/",
+  "start_url": "https://tasks-six-gamma.vercel.app/",
+  "scope": "https://tasks-six-gamma.vercel.app/",
   "short_name": "SamTasks",
   "name": "SamTasks: Plan Easy, Live sorted",
   "icons": [
